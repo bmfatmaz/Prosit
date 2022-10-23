@@ -70,6 +70,24 @@ public class Prosit4 {
         v4.salaire();
         r1.salaire();
         r2.salaire();
+        Produit produit1= new ProduitFruit("Mars",12.3f,1254,"Fraise");
+        Produit produit2= new ProduitFruit("Juin",50,1224,"Pastèque");
+        Produit produit3= new ProduitFruit("Décembre ",25.6f,7896,"Mandarine ");
+        Produit produit4= new ProduitLegume("Janvier",14,8521,"Artichauts");
+         mag.ajouterProduit(produit1);
+       mag.ajouterProduit(produit2);
+       mag.ajouterProduit(produit3);
+       mag.ajouterProduit(produit4);
+       System.out.println(mag.toString());
+       System.out.println(produit4.determinerTypeProduit());
+       System.out.println(p.determinerTypeProduit());
+       System.out.println(mag.calculStock());
+       
+       System.out.println(((ProduitFruit)produit1).estFrais("Mars"));
+        System.out.println(((ProduitLegume)produit4).estFrais("Avril"));
+
+
+        
     }
     
 }

@@ -92,7 +92,18 @@ private Employe[] employes;
     
     return "le magansin  id :"+this.id+"\n nom :  "+this.nom+"\nadresse "+this.adr+"\n capacité "+this.cap+"\n Produits: "+str+"\n Employés"+str2;
 }
-  
+   public float calculStock (){
+              float stock=0.0f;
+
+    for (int i =0 ; i<this.cap;i++){
+        //str=str+"7ajja"
+        if (this.produits[i] instanceof ProduitFruit)
+            stock=stock+produits[i].getQt();
+       
+    }
+    return stock;
+   }
+    
      
     
   
