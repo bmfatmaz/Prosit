@@ -84,7 +84,7 @@ public class Prosit4 {
        System.out.println(mag.calculStock());
        
        System.out.println(((ProduitFruit)produit1).estFrais("Mars"));
-        System.out.println(((ProduitLegume)produit4).estFrais("Avril"));
+       System.out.println(((ProduitLegume)produit4).estFrais("Avril"));
 
 
         

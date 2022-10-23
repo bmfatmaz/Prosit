@@ -81,11 +81,9 @@ private Employe[] employes;
     String str2 ="";
 
     for (int i =0 ; i<this.cap;i++){
-        //str=str+"7ajja"
         str+="\n nom:  "+produits[i].getLibelle()+"  Prix:  "+produits[i].getPrix();
     }
      for (int i =0 ; i<this.nbr_employe;i++){
-        //str=str+"7ajja"
         str2+="\n nom:  "+employes[i].getNom()+"  nombre d'heures:  "+employes[i].getNbr_h();
     }
     
@@ -96,7 +94,6 @@ private Employe[] employes;
               float stock=0.0f;
 
     for (int i =0 ; i<this.cap;i++){
-        //str=str+"7ajja"
         if (this.produits[i] instanceof ProduitFruit)
             stock=stock+produits[i].getQt();
        
