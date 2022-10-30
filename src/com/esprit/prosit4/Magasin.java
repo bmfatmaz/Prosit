@@ -32,7 +32,7 @@ private Employe[] employes;
         this.id = id;
         this.adr = adr;
         this.cap = cap;
-      this.produits= new Produit[50];
+      this.produits= new Produit[2];
       this.employes= new Employe[20];
 
       
@@ -44,7 +44,7 @@ private Employe[] employes;
         this.id = id;
         this.nom = nom;
         this.adr = adr;
-        this.produits= new Produit[50];
+        this.produits= new Produit[2];
         this.employes= new Employe[20];
 
 
@@ -63,16 +63,23 @@ private Employe[] employes;
     }
 }
 
-   public void ajouterProduit (Produit p){
-    if (this.cap<50){
+   public void ajouterProduit (Produit p) throws MagasinPleinException, PrixNegatifException{
+   // if (this.cap<50){
+    if (p.getPrix() < 0) {
+            throw new PrixNegatifException("Prix de " + p.getLibelle() + " est négatif!");
+        } 
     
-    //tab[i]=2;    
-    produits[this.cap]=p;
-    this.cap++;
-    }else 
-    {
-        System.out.println("Tableau pleint .....");
+        try {
+              produits[this.cap]=p;
+              this.cap++;}
+        catch (ArrayIndexOutOfBoundsException e){
+            throw new MagasinPleinException("le magasin est plein");
     }
+    //}
+    //else 
+    //{
+     //   System.out.println("Tableau pleint .....");
+     // }
 }
 
     @Override

@@ -14,7 +14,7 @@ public class Prosit4 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MagasinPleinException, PrixNegatifException {
         // TODO code application logic here
         
         Magasin mag = new Magasin(1, "carrefour", "centre-ville");
@@ -56,7 +56,7 @@ public class Prosit4 {
        Produit p3 =new Produit(1022, "jus", "delice", 2000);
        mag.ajouterProduit(p);
        mag.ajouterProduit(p1);
-       mag2.ajouterProduit(p2);
+       mag.ajouterProduit(p2);
        mag2.ajouterProduit(p3);
        System.out.println(mag.toString());
        System.out.println(mag2.toString());
@@ -73,7 +73,7 @@ public class Prosit4 {
         Produit produit1= new ProduitFruit("Mars",12.3f,1254,"Fraise");
         Produit produit2= new ProduitFruit("Juin",50,1224,"Pastèque");
         Produit produit3= new ProduitFruit("Décembre ",25.6f,7896,"Mandarine ");
-        Produit produit4= new ProduitLegume("Janvier",14,8521,"Artichauts");
+        Produit produit4= new ProduitLegume("Décembre",14,8521,"Artichauts");
          mag.ajouterProduit(produit1);
        mag.ajouterProduit(produit2);
        mag.ajouterProduit(produit3);
@@ -84,7 +84,7 @@ public class Prosit4 {
        System.out.println(mag.calculStock());
        
        System.out.println(((ProduitFruit)produit1).estFrais("Mars"));
-       System.out.println(((ProduitLegume)produit4).estFrais("Avril"));
+       System.out.println(((ProduitLegume)produit4).estFrais("Février"));
 
 
         
